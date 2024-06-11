@@ -46,14 +46,7 @@ def preprocess_image(img):
 # Streamlit app
 def main():
     st.title("Paddy Disease Prediction App")
-    page_bg_img = ''' <style> 
-    body {
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommunity.nasscom.in%2Fcommunities%2Fagritech-solutions%2F5-advantages-smart-farming&psig=AOvVaw0d717cuUqmlFil_ebCbpIr&ust=1718216887262000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjP_diW1IYDFQAAAAAdAAAAABAS");
-    background-size:cover;
-    }
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+
     # Upload image through Streamlit
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
