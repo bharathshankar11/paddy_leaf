@@ -25,7 +25,7 @@ def add_bg_from_local():
         <style>
         .stApp {{
             background-image: url("https://img.freepik.com/free-photo/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed_181624-25838.jpg?t=st=1718132095~exp=1718135695~hmac=922d823bfa5e3d46447fb607c958599bace78715a77fd8eec0374b1e2333e23f&w=826");
-            background-size: 100px;
+            background-size: cover;
         }}
         </style>
         """,
