@@ -68,7 +68,7 @@ def main():
         st.image(image_display, caption="Uploaded Image", use_column_width=True)
 
         # Preprocess the uploaded image
-        img = image.load_img(uploaded_file, target_size=(224, 224))
+        img = image.load_img(uploaded_file, target_size=(150, 150))
         img = preprocess_image(img)
 
         # Extract features using the VGG16 base model
@@ -88,7 +88,7 @@ def main():
         predicted_class_label = class_labels[predicted_class_index]
 
         # Display the prediction
-        st.write(f"<span style='font-size:20px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
+        st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
         
 # st.write(f"Predicted Class Label: :red[{predicted_class_label}]")
 
