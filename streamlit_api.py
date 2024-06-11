@@ -88,7 +88,9 @@ def main():
         predicted_class_label = class_labels[predicted_class_index]
 
         # Display the prediction
-        st.write(f"Predicted Class Label: :red[{predicted_class_label}]")
+        st.write(f"<span style='font-size:20px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
+        
+# st.write(f"Predicted Class Label: :red[{predicted_class_label}]")
 
 if __name__ == "__main__":
     main()
