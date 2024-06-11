@@ -81,15 +81,15 @@ def main():
 
         # Make predictions using the student model
         predictions = model.predict(img_features)
-
+ # Display the prediction
+        st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
         # Get the predicted class index
         predicted_class_index = np.argmax(predictions[0])
 
         # Map the index back to class label
         predicted_class_label = class_labels[predicted_class_index]
 
-        # Display the prediction
-        st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
+       
         
 if __name__ == "__main__":
     main()
