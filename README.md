@@ -1,5 +1,3 @@
-# paddy_leaf
-
 # Paddy Disease Detection App
 
 Visit the [Paddy Disease Detection App](https://paddy-leaf-disease-detection.streamlit.app/) 
@@ -9,8 +7,8 @@ Visit the [Paddy Disease Detection App](https://paddy-leaf-disease-detection.str
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Altaf-01/Paddy_Leaf_Disease_Detection.git
-   cd Paddy_Leaf_Disease_Detection
+   git clone https://github.com/bharathshankar11/paddy_leaf.git
+   cd paddy_leaf
 
 2. **Install Dependencies:**
    ```bash
