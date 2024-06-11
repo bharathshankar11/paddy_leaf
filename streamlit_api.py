@@ -59,7 +59,7 @@ def add_bg_from_local():
         unsafe_allow_html=True
     )
 
-add_bg_from_local()
+
     # Upload image through Streamlit
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -93,3 +93,4 @@ add_bg_from_local()
 
 if __name__ == "__main__":
     main()
+    add_bg_from_local()
