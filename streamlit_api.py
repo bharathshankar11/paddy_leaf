@@ -7,7 +7,6 @@ from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
 import gdown  # To download the model from Google Drive
 
-
 # Defining the number of classes
 num_classes = 5
 
@@ -19,6 +18,7 @@ class_labels = {
     3: 'Leaf Blast',
     4: 'Tungro'
 }
+
 def add_bg_from_local():
     st.markdown(
         f"""
@@ -31,8 +31,8 @@ def add_bg_from_local():
         """,
         unsafe_allow_html=True
     )
-add_bg_from_local()
 
+add_bg_from_local()
 
 #Loading model file from Drive
 
@@ -63,12 +63,13 @@ def main():
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
-        # Display the uploaded image
+        # Resize and display the uploaded image
         image_display = cv2.imdecode(np.fromstring(uploaded_file.read(), np.uint8), 1)
-        st.image(image_display, caption="Uploaded Image", use_column_width=True)
+        image_display = cv2.resize(image_display, (300, 300))  # Resize the image
+        st.image(image_display, caption="Uploaded Image")
 
         # Preprocess the uploaded image
-        img = image.load_img(uploaded_file, target_size=(150, 150))
+        img = image.load_img(uploaded_file, target_size=(224, 224))
         img = preprocess_image(img)
 
         # Extract features using the VGG16 base model
@@ -90,8 +91,5 @@ def main():
         # Display the prediction
         st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
         
-# st.write(f"Predicted Class Label: :red[{predicted_class_label}]")
-
 if __name__ == "__main__":
     main()
-
