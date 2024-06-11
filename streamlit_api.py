@@ -88,8 +88,8 @@ def main():
         predicted_class_label = class_labels[predicted_class_index]
 
         # Display the prediction
-        st.write((f""" <style> .stApp {{font-color:red;}} </style>""",
-        unsafe_allow_html=True)
+        st.write(f""" <style> .stApp {{font-color:red;}} </style>""",
+        unsafe_allow_html=True
                  Predicted Class Label: :red[{predicted_class_label}]")
 
 if __name__ == "__main__":
