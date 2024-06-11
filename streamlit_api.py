@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import streamlit as st
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '4'
 from keras.models import load_model
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
