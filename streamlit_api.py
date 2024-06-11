@@ -66,7 +66,6 @@ def main():
         # Resize and display the uploaded image
         image_display = cv2.imdecode(np.fromstring(uploaded_file.read(), np.uint8), 1)
         image_display = cv2.resize(image_display, (300, 300))  # Resize the image
-        st.image(image_display, caption="Uploaded Image")
 
         # Preprocess the uploaded image
         img = image.load_img(uploaded_file, target_size=(224, 224))
@@ -81,15 +80,20 @@ def main():
 
         # Make predictions using the student model
         predictions = model.predict(img_features)
- # Display the prediction
-        st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
+
         # Get the predicted class index
         predicted_class_index = np.argmax(predictions[0])
 
         # Map the index back to class label
         predicted_class_label = class_labels[predicted_class_index]
 
-       
-        
+        # Display the uploaded image and prediction side by side
+        col1, col2 = st.beta_columns(2)
+        with col1:
+            st.image(image_display, caption="Uploaded Image")
+
+        with col2:
+            st.write(f"<span style='font-size:30px; color:red;'>Predicted Class Label: {predicted_class_label}</span>", unsafe_allow_html=True)
+
 if __name__ == "__main__":
     main()
