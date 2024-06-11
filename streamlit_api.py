@@ -45,20 +45,7 @@ def preprocess_image(img):
 
 # Streamlit app
 def main():
-    st.title("Paddy Disease Prediction App")
-def add_bg_from_local():
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fagriculture&psig=AOvVaw3D9fQh9PN5L2ADQ4uG31Ny&ust=1718218295773000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMix-vCb1IYDFQAAAAAdAAAAABAE");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
+    st.title("Paddy Leaf Disease Prediction App")
 
     # Upload image through Streamlit
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
@@ -93,4 +80,16 @@ def add_bg_from_local():
 
 if __name__ == "__main__":
     main()
-    add_bg_from_local()
+def add_bg_from_local():
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("");
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+add_bg_from_local()
