@@ -88,7 +88,7 @@ def main():
         predicted_class_label = class_labels[predicted_class_index]
 
         # Display the uploaded image and prediction side by side
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns([1, 1])
         with col1:
             st.image(image_display, caption="Uploaded Image")
 
