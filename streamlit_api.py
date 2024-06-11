@@ -25,7 +25,7 @@ def add_bg_from_local():
         <style>
         .stApp {{
             background-image: url("https://img.freepik.com/free-photo/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed_181624-25838.jpg?t=st=1718132095~exp=1718135695~hmac=922d823bfa5e3d46447fb607c958599bace78715a77fd8eec0374b1e2333e23f&w=826");
-            background-size: cover;
+            background-size: 100px;
         }}
         </style>
         """,
@@ -88,7 +88,7 @@ def main():
         predicted_class_label = class_labels[predicted_class_index]
 
         # Display the prediction
-        st.write(f"<style> {{font-color:red;}} </style> Predicted Class Label: :red[{predicted_class_label}]")
+        st.write(f"Predicted Class Label: :red[{predicted_class_label}]")
 
 if __name__ == "__main__":
     main()
